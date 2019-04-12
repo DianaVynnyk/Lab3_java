@@ -1,82 +1,91 @@
 package ua.lviv.iot.sportequipment.models;
 
 public abstract class SportEquipment {
-	private String name;
-	private int age;
-	private Experience experience;
-	private Season season;
-	private double price;
-	private double rating;
+    private String name;
+    private int age;
+    private Experience experience;
+    private Season season;
+    private double price;
+    private double rating;
 
-	public SportEquipment() {
+    public SportEquipment() {
 
-	}
+    }
+    public String getHeaders() {
+        return "name" + ", " + "age" + ", " +"experience" + ", " + "season" + ", "
+                + "price" + ", rating" + ", ";
+    }
+    public String toCSV() {
+        return name + ", " + age + ", " + experience + ", " + season + ", "
+                 + price + ", " + rating + ", ";
+    }
 
-	public String getName() {
-		return name;
-	}
+    public SportEquipment(final String name, final int age, final Experience experience, final Season season,
+            final double price, final double rating) {
+        this.name = name;
+        this.age = age;
+        this.experience = experience;
+        this.season = season;
+        this.price = price;
+        this.rating = rating;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public void setName(final String name) {
+        this.name = name;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public int getAge() {
+        return age;
+    }
 
-	public Experience getExperience() {
-		return experience;
-	}
+    public void setAge(final int age) {
+        this.age = age;
+    }
 
-	public void setExperience(Experience experience) {
-		this.experience = experience;
-	}
+    public Experience getExperience() {
+        return experience;
+    }
 
-	public Season getSeason() {
-		return season;
-	}
+    public void setExperience(final Experience experience) {
+        this.experience = experience;
+    }
 
-	public void setSeason(Season season) {
-		this.season = season;
-	}
+    public Season getSeason() {
+        return season;
+    }
 
-	public double getPrice() {
-		return price;
-	}
+    public void setSeason(final Season season) {
+        this.season = season;
+    }
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
+    public double getPrice() {
+        return price;
+    }
 
-	public double getRating() {
-		return rating;
-	}
+    public void setPrice(final double price) {
+        this.price = price;
+    }
 
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
+    public double getRating() {
+        return rating;
+    }
 
-	public SportEquipment(String name, int age, Experience experience, Season season, double price, double rating) {
-		this.name = name;
-		this.age = age;
-		this.experience = experience;
-		this.season = season;
-		this.price = price;
-		this.rating = rating;
-	}
+    public void setRating(final double rating) {
+        this.rating = rating;
+    }
 
-	@Override
-	public String toString() {
-		return "SportEquipment [name=" + name + ", experience=" + experience + ", season=" + season + ", price=" + price
-				+ ", rating=" + rating + ", age=" + age + "]";
-	}
+    @Override
+    public String toString() {
+        return "SportEquipment [name=" + name + ", " + "experience=" + experience + ", " + "season=" + season + ", "
+                + "price=" + price + ", rating=" + rating + ", " + "age=" + age + "]";
+    }
 
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-	}
+    }
 
 }
